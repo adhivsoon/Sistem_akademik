@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ruangs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ruang <th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ruangs.each do |ruang| %>
+      <tr>
+        <td><%= ruang.kode_ruang %> </td>
+        <td><%= link_to 'Show', ruang %></td>
+        <td><%= link_to 'Edit', edit_ruang_path(ruang) %></td>
+        <td><%= link_to 'Destroy', ruang, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ruang', new_ruang_path %>

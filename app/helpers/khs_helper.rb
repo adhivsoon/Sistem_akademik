@@ -1,0 +1,2 @@
+module KhsHelper
+end

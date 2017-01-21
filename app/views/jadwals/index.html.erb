@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Jadwals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Kode MK </th>
+      <th>NIP </th>
+      <th>Kode Ruang </th>
+      <th>Waktu </th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jadwals.each do |jadwal| %>
+      <tr>
+        <td><%= jadwal.mata_kuliah.kode_mk %></td>
+        <td><%= jadwal.dosen.nip %> </td>
+        <td><%= jadwal.ruang.kode_ruang %> </td>
+        <td><%= link_to 'Show', jadwal %></td>
+        <td><%= link_to 'Edit', edit_jadwal_path(jadwal) %></td>
+        <td><%= link_to 'Destroy', jadwal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Jadwal', new_jadwal_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Jurusans</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Kode Jurusan <th>
+        <th> Nama Jurusan </th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jurusans.each do |jurusan| %>
+      <tr>
+        <td><%= jurusan.kode_jur %></td>
+        <td><%= jurusan.nama_jur %></td>
+        <td><%= link_to 'Show', jurusan %></td>
+        <td><%= link_to 'Edit', edit_jurusan_path(jurusan) %></td>
+        <td><%= link_to 'Destroy', jurusan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Jurusan', new_jurusan_path %>

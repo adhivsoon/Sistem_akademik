@@ -1,0 +1,1 @@
+json.array! @mata_kuliahs, partial: 'mata_kuliahs/mata_kuliah', as: :mata_kuliah

@@ -1,0 +1,1 @@
+json.partial! "khs/kh", kh: @kh

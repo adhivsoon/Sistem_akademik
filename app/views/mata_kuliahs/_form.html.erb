@@ -1,0 +1,31 @@
+<%= form_for(mata_kuliah) do |f| %>
+  <% if mata_kuliah.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mata_kuliah.errors.count, "error") %> prohibited this mata_kuliah from being saved:</h2>
+
+      <ul>
+      <% mata_kuliah.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :kode_mk %>
+    <%= f.text_field :kode_mk %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nama_mk %>
+    <%= f.text_field :nama_mk %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sks %>
+    <%= f.text_field :sks %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

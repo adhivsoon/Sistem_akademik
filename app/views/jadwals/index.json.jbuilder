@@ -1,0 +1,1 @@
+json.array! @jadwals, partial: 'jadwals/jadwal', as: :jadwal

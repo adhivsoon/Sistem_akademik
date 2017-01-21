@@ -1,0 +1,1 @@
+json.partial! "mata_kuliahs/mata_kuliah", mata_kuliah: @mata_kuliah

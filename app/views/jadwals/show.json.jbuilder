@@ -1,0 +1,1 @@
+json.partial! "jadwals/jadwal", jadwal: @jadwal

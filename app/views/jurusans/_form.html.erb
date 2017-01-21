@@ -1,0 +1,27 @@
+<%= form_for(jurusan) do |f| %>
+  <% if jurusan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(jurusan.errors.count, "error") %> prohibited this jurusan from being saved:</h2>
+
+      <ul>
+      <% jurusan.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="field">
+  <%= f.label :kode_jur %>
+  <%= f.text_feld :kode_jur %>
+</div>
+
+<div class="field">
+  <%= f.label :nama_jur %>
+  <%= f.text_feld :nama_jur %>
+</div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

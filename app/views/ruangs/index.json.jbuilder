@@ -1,0 +1,1 @@
+json.array! @ruangs, partial: 'ruangs/ruang', as: :ruang
